@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="@dimen/font_big"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <ImageView
+        android:id="@+id/rock_img"
+        android:layout_width="@dimen/width_normal"
+        android:layout_height="@dimen/height_normal"
+        android:background="@mipmap/rock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_txt"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <ImageView
+        android:id="@+id/scissors_img"
+        android:layout_width="@dimen/width_normal"
+        android:layout_height="@dimen/height_normal"
+        android:background="@mipmap/scissors"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rock_img"
+        app:layout_constraintTop_toBottomOf="@id/title_txt"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <ImageView
+        android:id="@+id/paper_img"
+        android:layout_width="@dimen/width_normal"
+        android:layout_height="@dimen/height_normal"
+        android:background="@mipmap/paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rock_img"
+        app:layout_constraintTop_toBottomOf="@id/title_txt"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <TextView
+        android:id="@+id/your_choice_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_choice"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintTop_toBottomOf="@id/rock_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <TextView
+        android:id="@+id/cpu_choice_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cpu_choice"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintTop_toBottomOf="@id/your_choice_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <TextView
+        android:id="@+id/players_in_game_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/players_in_game"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintTop_toBottomOf="@id/cpu_choice_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <TextView
+        android:id="@+id/score_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="__ : __"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintTop_toBottomOf="@id/players_in_game_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_turn"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintTop_toBottomOf="@id/score_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

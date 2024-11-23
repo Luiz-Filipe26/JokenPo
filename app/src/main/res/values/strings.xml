@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JokenPo</string>
+    <string name="title">Jokenpô</string>
+    <string name="your_choice">Sua escolha: </string>
+    <string name="cpu_choice">Escolha CPU: </string>
+    <string name="players_in_game">Você X CPU</string>
+    <string name="new_turn">Nova Partida</string>
+</resources>
