@@ -5,4 +5,8 @@
     <string name="cpu_choice">Escolha CPU: </string>
     <string name="players_in_game">Você X CPU</string>
     <string name="new_turn">Nova Partida</string>
+
+    <string name="rock">Pedra</string>
+    <string name="paper">Papel</string>
+    <string name="scissors">Tesoura</string>
 </resources>
