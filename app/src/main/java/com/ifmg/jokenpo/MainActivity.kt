@@ -71,7 +71,7 @@ class MainActivity : ComponentActivity() {
 
     private fun playRound() {
         if (userChoice == null) {
-            Toast.makeText(this, "Escolha um movimento!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.choose_movement), Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -84,16 +84,16 @@ class MainActivity : ComponentActivity() {
         }
 
         val resultText = when {
-            userChoice == cpuChoice -> "Empate!"
+            userChoice == cpuChoice -> getString(R.string.draw)
             (userChoice == "rock" && cpuChoice == "scissors") ||
                     (userChoice == "paper" && cpuChoice == "rock") ||
                     (userChoice == "scissors" && cpuChoice == "paper") -> {
                 playerScore++
-                "Você venceu!"
+                getString(R.string.you_won)
             }
             else -> {
                 cpuScore++
-                "CPU venceu!"
+                getString(R.string.cpu_won)
             }
         }
 
@@ -101,7 +101,6 @@ class MainActivity : ComponentActivity() {
         binding.scoreTxt.text = "$playerScore : $cpuScore"
         Toast.makeText(this, resultText, Toast.LENGTH_SHORT).show()
 
-        // Desabilita as escolhas após a jogada
         disableChoices()
     }
 
@@ -122,7 +121,6 @@ class MainActivity : ComponentActivity() {
         binding.yourChoiceTxt.text = getString(R.string.your_choice)
         binding.cpuChoiceTxt.text = getString(R.string.cpu_choice)
 
-        // Reabilita as escolhas
         enableChoices()
     }
 
@@ -133,9 +131,8 @@ class MainActivity : ComponentActivity() {
         binding.yourChoiceTxt.text = getString(R.string.your_choice)
         binding.cpuChoiceTxt.text = getString(R.string.cpu_choice)
 
-        // Reabilita as escolhas para uma nova rodada
         enableChoices()
 
-        Toast.makeText(this, "Jogo resetado!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.game_reset), Toast.LENGTH_SHORT).show()
     }
 }

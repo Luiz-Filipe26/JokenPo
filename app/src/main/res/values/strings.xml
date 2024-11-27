@@ -9,4 +9,10 @@
     <string name="rock">Pedra</string>
     <string name="paper">Papel</string>
     <string name="scissors">Tesoura</string>
+
+    <string name="choose_movement">Escolha um movimento!</string>
+    <string name="draw">Empate!</string>
+    <string name="you_won">Você venceu!</string>
+    <string name="cpu_won">CPU venceu!</string>
+    <string name="game_reset">Jogo reiniciado!</string>
 </resources>
